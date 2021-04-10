@@ -3,6 +3,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { ExploreContainerComponent } from './explore-container.component';
 
+import { RouterTestingModule } from '@angular/router/testing';
+
 describe('ExploreContainerComponent', () => {
   let component: ExploreContainerComponent;
   let fixture: ComponentFixture<ExploreContainerComponent>;
@@ -10,7 +12,7 @@ describe('ExploreContainerComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ExploreContainerComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), RouterTestingModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ExploreContainerComponent);

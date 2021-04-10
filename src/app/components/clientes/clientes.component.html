@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="arrow-back-outline" (click)="navegar()" id="atras"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let cliente of clientes; let i = index"  id="card">
+    <ion-card-header>
+      <div class="box-icon">
+        <ion-card-title>{{cliente}}</ion-card-title>
+        <ion-button color="success" (click)="detalle(cliente)" id="btn-detail">
+          <ion-icon class="icon" name="pencil-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
